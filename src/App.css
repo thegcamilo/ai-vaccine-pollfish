@@ -1,38 +1,75 @@
 .App {
   text-align: center;
+  font-family: 'Lato', sans-serif;
+  margin: 2% 15% 5%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Title {
+  font-size: 32px;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Subtitle {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.BigText {
+  font-size: 21px;
 }
 
-.App-link {
-  color: #61dafb;
+.Text {
+  font-size: 18px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Question {
+  font-size: 18px;
+  font-weight: bold; 
+  margin: 5px;
+}
+
+.Spotlight {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.RedSpotlight {
+  color: red;
+}
+
+.QuestionMargin {
+  margin: 15px;
+}
+
+.Answer {
+  display: inline-block;
+  margin: 10px;
+  font-weight: normal;
+}
+
+.Slider {
+  margin-top: 50px;
+}
+
+.SliderMarker {
+  margin-bottom: 20px;
+  width: 60%;
+  font-size: 16px;
+  display: inline-block;
+  font-weight: normal;
+}
+
+.SliderLabel {
+  width: 25%;
+  float: left;
+}
+
+.SliderTicks {
+  margin-left: 20%;
+  margin-top: -14px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  width: 60%;
+  float: center;
+  font-size: 14px;
 }
