@@ -105,7 +105,7 @@ class Future extends React.Component {
             content = <div>
                 <div>
                     <div className="Subtitle">
-                        We are also interested how you would assign responsibility for the consequences of the vaccine.
+                        We are also interested in how you would assign responsibility for the consequences of this vaccine.
                     </div>
                     <div className="Text" onMouseEnter={() => this.setState({showNews: true})} onMouseLeave={() => this.setState({showNews: false})}>
                             If needed, please hover to see the news.
