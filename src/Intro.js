@@ -14,6 +14,7 @@ class Intro extends React.Component {
         this.changeInternalState = this.changeInternalState.bind(this);
         this.saveResponses = this.saveResponses.bind(this);
         this.checkTime = this.checkTime.bind(this);
+        this.responsesIncludeKey = this.responsesIncludeKey.bind(this);
 
     }
 
@@ -40,6 +41,10 @@ class Intro extends React.Component {
         }
     }
 
+    responsesIncludeKey(key) {
+        return (key in this.state.responses);
+    }
+
     changeInternalState() {
         this.setState({initialInfo: false, init: new Date()});
     }
@@ -52,7 +57,7 @@ class Intro extends React.Component {
 
     render() {
         let content;
-        let questions = (!this.state.initialInfo)? <ConcernContact saveResponses={this.saveResponses}/> : <div></div>;
+        let questions = (!this.state.initialInfo)? <ConcernContact saveResponses={this.saveResponses} responsesIncludeKey={this.responsesIncludeKey}/> : <div></div>;
         content = <div>
             <div className="Title">Introduction</div>
             <div className="BigText">

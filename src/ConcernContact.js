@@ -37,7 +37,8 @@ class ConcernContact extends React.Component {
                     <div key={qIdx} className="Question">
                         <span>{question.question}</span>
                         <div key={qIdx}>
-                            <input type="range" min="0" max="100" step="1" onChange={(event) => {this.props.saveResponses(question.id, event.target.value)}}/>}
+                            <input type="range" min="0" max="100" style={(!this.props.responsesIncludeKey(question.id))? {background: "#000000"}: {}}
+                            step="1" onChange={(event) => {this.props.saveResponses(question.id, event.target.value)}}/>
                             <div className="SliderMarker">
                                 <span style={{float: "left"}}>{question.answers[0]}</span>
                                 <span style={{float: "center", textAlign: "center"}}>{question.answers[1]}</span>
