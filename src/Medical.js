@@ -26,7 +26,7 @@ class Medical extends React.Component {
     checkTime() {
         const delta_time = (new Date() - this.state.init) / 1000;
         console.log(delta_time);
-        if (delta_time < 0){
+        if (delta_time < 20){
             alert("Please take some time to answer the questions.");
         } else {
             if (Object.keys(this.state.responses).length < 10) {

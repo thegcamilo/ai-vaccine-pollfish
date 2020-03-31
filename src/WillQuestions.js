@@ -11,6 +11,7 @@ class WillQuestions extends React.Component {
         this.state = {
             questions: shuffle(tmpShuffle[0]).concat(tmpShuffle[1]),
             questionCompletion: beforeAfter[[this.props.beforeAfter]],
+            postQuestionID: (this.props.beforeAfter === "future") ? "Future" : ""
         }
     }
 
@@ -21,12 +22,16 @@ class WillQuestions extends React.Component {
                     <div key={qIdx} >
                         <span className="Question">{question.question + this.state.questionCompletion}</span>
                         <div key={qIdx}>
-                            <input key={question.id + qIdx} style={(!this.props.responsesIncludeKey(question.id))? {background: "#000000"}: {}} type="range" min="0" max="100" step="1" onChange={(event) => {this.props.saveResponses(question.id, event.target.value)}}/>
+                            <input key={question.id + qIdx} 
+                            style={(!this.props.responsesIncludeKey(question.id + this.state.postQuestionID))? {background: "#000000"}: {}} 
+                            type="range" min="0" max="100" step="1" 
+                            onChange={(event) => {this.props.saveResponses(question.id + this.state.postQuestionID, event.target.value)}}
+                            onClick={(event) => {this.props.saveResponses(question.id + this.state.postQuestionID, event.target.value)}}/>
                             <div className="SliderTicks">
                                     <span className="SliderLabel" style={{textAlign: "left", width: "33.3%"}}>|</span>
                                     <span className="SliderLabel" style={{width: "33.3%"}}>|</span>
                                     <span className="SliderLabel" style={{textAlign: "right", width: "33.4%"}}>|</span>
-                                </div>
+                            </div>
                             <div className="SliderMarker">
                                 <span style={{float: "left"}}>{question.answers[0]}</span>
                                 <span style={{float: "center", textAlign: "center"}}>{question.answers[1]}</span>

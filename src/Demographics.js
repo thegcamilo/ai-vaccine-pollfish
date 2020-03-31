@@ -27,10 +27,10 @@ class Demographics extends React.Component {
     checkTime() {
         const delta_time = (new Date() - this.state.init) / 1000;
         console.log(delta_time);
-        if (delta_time < 0){
+        if (delta_time < 30){
             alert("Please take some time to answer the questions.");
         } else {
-            if (Object.keys(this.state.responses).length < 21) {
+            if (Object.keys(this.state.responses).length < 24) {
                 alert("You must answer all questions.");
             } else {
                 this.props.saveDictToState(this.state.responses);
@@ -57,7 +57,8 @@ class Demographics extends React.Component {
                                 <input key={question.id + qIdx} 
                                 style={!(question.id in this.state.responses)? {background: "#000000"}: {}} 
                                 type="range" min="0" max="100" step="1" 
-                                onChange={(event) => {this.saveResponses(question.id, event.target.value)}}/>
+                                onChange={(event) => {this.saveResponses(question.id, event.target.value)}}
+                                onClick={(event) => {this.saveResponses(question.id, event.target.value)}}/>
                                 <div className="SliderTicks">
                                         <span className="SliderLabel" style={{textAlign: "left", width: "33.3%"}}>|</span>
                                         <span className="SliderLabel" style={{width: "33.3%"}}>|</span>

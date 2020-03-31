@@ -28,9 +28,9 @@ class Responsibility extends React.Component {
     }
 
     checkTime() {
-        const multiplier = (this.state.posNeg === "neg")? 4 : 3;
+        const multiplier = (this.state.posNeg === "neg")? 3 : 2;
         const delta_time = (new Date() - this.state.init) / 1000;
-        if (delta_time < 0) {
+        if (delta_time < (12 * (this.state.currEntity + 1))) {
             alert("Please take some time to carefully answer the questions.");
         } else {
             if (Object.keys(this.state.responses).length < (multiplier * (this.state.currEntity + 1))) {
@@ -57,15 +57,17 @@ class Responsibility extends React.Component {
                 <div>
                     {this.state.entityQuestions.map((question, qIdx) => (
                         // !(question.id === "Punish" && this.state.posNeg === "pos")? 
-                        <div style={(question.id === "Punish" && this.state.posNeg === "pos")? {display: "none"}: {}} key={qIdx} className="Question">
-                            <span className="Question">{question.initial[[this.state.posNeg]]} </span>
-                            <span className="Spotlight Question"> {entity.text} </span> 
-                            <span className="Question"> {question.conclusion[[this.state.posNeg]]}</span>
+                        <div style={(question.id === "Punish" && (this.state.posNeg === "pos" || this.state.posNeg === "con"))? {display: "none"}: {}} key={qIdx} className="Question">
+                            <span className="Question" style={{margin: "0px"}}>{question.initial[[this.state.posNeg]]} </span>
+                            <span className="Spotlight Question" style={{margin: "0px"}}> {entity.text} </span> 
+                            <span className="Question" style={{margin: "0px"}}> {question.conclusion[[this.state.posNeg]]}</span>
                             <div key={qIdx}>
                                 <input key={question.id + qIdx}
                                 value={((this.state.responses[entity.id + question.id] == null)? 50: this.state.responses[entity.id + question.id])} 
                                 style={!((entity.id + question.id) in this.state.responses)? {background: "#000000"}: {}} type="range" min="0" max="100" 
-                                step="1" onChange={(event) => {this.saveResponses(entity.id + question.id, event.target.value)}}/>
+                                step="1" 
+                                onChange={(event) => {this.saveResponses(entity.id + question.id, event.target.value)}}
+                                onClick={(event) => {this.saveResponses(entity.id + question.id, event.target.value)}}/>
                                 <div className="SliderTicks">
                                     <span className="SliderLabel" style={{textAlign: "left"}}>|</span>
                                     <span className="SliderLabel">|</span>

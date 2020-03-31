@@ -26,13 +26,14 @@ class Present extends React.Component {
         const delta_time = (new Date() - this.state.init) / 1000;
         console.log(delta_time);
         if (this.state.initialInfo) {
-            if (delta_time < 0) {
-                alert("Please take some time to carefully read the provided paragraph.");
+            if (delta_time < 20) {
+                alert("Please take some time to carefully read the provided excerpt.");
             } else {
+                this.props.saveTime("presentReadingFinish");
                 this.changeInternalState();
             }
         } else {
-            if (delta_time < 0) {
+            if (delta_time < 15) {
                 alert("Please take some time to carefully answer the questions.");
             } else {
                 if (Object.keys(this.state.responses).length < 5) {

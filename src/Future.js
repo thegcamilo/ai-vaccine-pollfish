@@ -10,7 +10,7 @@ class Future extends React.Component {
         super(props);
         this.state = {
             init: new Date(),
-            stages: ["intro", "will", "resp"],
+            stages: ["intro", "resp", "will"],
             currStageId: 0, 
             responses: {},
             hideButton: false, 
@@ -42,26 +42,33 @@ class Future extends React.Component {
         console.log(delta_time);
         const currStage = this.state.stages[this.state.currStageId];
         if (currStage === "intro") {
-            if (delta_time < 0) {
-                alert("Please take some time to carefully read the provided paragraph.");
+            if (delta_time < 15) {
+                alert("Please take some time to carefully read the provided excerpt.");
             } else {
+                this.setState({hideButton: true});
+                this.props.saveTime("futureReadingFinish");
                 this.setState({currStageId: this.state.currStageId + 1});
             }
         } else if (currStage === "will"){
-            if (delta_time < 0) {
+            if (delta_time < 15) {
                 alert("Please take some time to carefully answer the questions.");
             } else {
                 if (Object.keys(this.state.responses).length < 5) {
                     alert("You must answer all questions.");
                 } else {
-                    this.setState({hideButton: true});
-                    this.setState({currStageId: this.state.currStageId + 1});
+                    // this.setState({hideButton: true});
+                    // this.setState({currStageId: this.state.currStageId + 1});
+                    this.props.saveDictToState(this.state.responses);
+                    this.props.skipAppStage();
                 }
             }
         } else if (currStage === "resp") {
             this.saveResponses("consequence", this.state.consequences);
-            this.props.saveDictToState(this.state.responses);
-            this.props.skipAppStage();
+            this.setState({currStageId: this.state.currStageId + 1});
+            // this.props.saveDictToState(this.state.responses);
+            // this.props.skipAppStage();
+            this.props.saveTime("respQFinish");
+            this.setState({hideButton: false});
         } else {
             alert("Not to be implemented");
         }
@@ -75,7 +82,9 @@ class Future extends React.Component {
                 <div className="Title">A vaccine for COVID-19 is expected to be widely available to the public in 12 to 18 months from now.</div>
                 <div className="Subtitle">
                     The following news excerpt is a future scenario where a vaccine has been finally approved by the U.S. FDA.
-                    Please read it below. 
+                    <div>
+                        Please read it below. 
+                    </div>
                 </div>
                 <div>
                     [ADD IMAGE HERE]
@@ -87,7 +96,7 @@ class Future extends React.Component {
             content = <div>
                 <div>
                     <div className="Subtitle">
-                        Taking in consideration the news excerpt you have just read, please answer the following questions.
+                        Taking in consideration the news excerpt you have read, please answer the following questions.
                     </div>
                     <div className="Text" onMouseEnter={() => this.setState({showNews: true})} onMouseLeave={() => this.setState({showNews: false})}>
                             If needed, please hover to see the news.
@@ -105,7 +114,9 @@ class Future extends React.Component {
             content = <div>
                 <div>
                     <div className="Subtitle">
-                        We are also interested in how you would assign responsibility for the consequences of this vaccine.
+                        {(this.state.consequences !== "neg")? 
+                        <span>We are interested in how you would assign credit and awareness to the entities involved in the development of the COVID-19 vaccine.</span>:
+                        <span>We are interested in how you would assign blame, awareness, and punishment to the entities involved in the development of the COVID-19 vaccine.</span>}
                     </div>
                     <div className="Text" onMouseEnter={() => this.setState({showNews: true})} onMouseLeave={() => this.setState({showNews: false})}>
                             If needed, please hover to see the news.

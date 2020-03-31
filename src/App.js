@@ -85,13 +85,17 @@ class App extends React.Component{
     if (stage === "consent") {
       content = <Consent skipStage={this.skipStage}/>;
     } else if (stage === "intro") {
-      content = <Intro skipStage={this.skipStage} saveDictToState={this.saveDictToState}/>
+      content = <Intro skipStage={this.skipStage} saveDictToState={this.saveDictToState} saveTime={this.saveTime}/>
     } else if (stage === "present") {
-      content = <Present skipStage={this.skipStage} saveDictToState={this.saveDictToState} beforeAfter={this.state.beforeAfter} agent={this.state.agent} disease={this.state.disease}/>
+      content = <Present skipStage={this.skipStage} 
+      saveDictToState={this.saveDictToState} beforeAfter={this.state.beforeAfter} 
+      agent={this.state.agent} disease={this.state.disease} saveTime={this.saveTime}/>
     } else if (stage === "att") {
       content = <AttCheck skipStage={this.skipStage} saveDictToState={this.saveDictToState} responsesIncludeKey={this.responsesIncludeKey}/>
     } else if (stage === "future") {
-      content = <Future skipAppStage={this.skipStage} saveDictToState={this.saveDictToState} agent={this.state.agent} disease={this.state.disease}/>
+      content = <Future skipAppStage={this.skipStage} 
+      saveDictToState={this.saveDictToState} agent={this.state.agent} 
+      disease={this.state.disease} saveTime={this.saveTime}/>
     } else if (stage === "mmms") {
       content = <Medical skipStage={this.skipStage} saveDictToState={this.saveDictToState}/>
     } else if (stage === "demographics") {
