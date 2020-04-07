@@ -29,8 +29,9 @@ class Responsibility extends React.Component {
 
     checkTime() {
         const multiplier = (this.state.posNeg === "neg")? 3 : 2;
+        const time = (this.state.posNeg === "neg")? 10 : 7;
         const delta_time = (new Date() - this.state.init) / 1000;
-        if (delta_time < (12 * (this.state.currEntity + 1))) {
+        if (delta_time < (time * (this.state.currEntity + 1))) {
             alert("Please take some time to carefully answer the questions.");
         } else {
             if (Object.keys(this.state.responses).length < (multiplier * (this.state.currEntity + 1))) {

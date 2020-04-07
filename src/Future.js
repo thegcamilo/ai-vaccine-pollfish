@@ -4,17 +4,22 @@ import WillQuestions from './WillQuestions';
 import Button from 'react-bootstrap/Button';
 import Responsibility from './Responsibility.js';
 import { consequences, getRandomItem } from './Data.js';
+import PosImg from './assets/pos_.png';
+import NegImg from './assets/neg_.png';
+import ConImg from './assets/con_.png';
 
 class Future extends React.Component {
     constructor(props) {
         super(props);
+        var consequence = getRandomItem(consequences);
         this.state = {
             init: new Date(),
             stages: ["intro", "resp", "will"],
             currStageId: 0, 
             responses: {},
             hideButton: false, 
-            consequences: getRandomItem(consequences),
+            consequences: consequence,
+            image: (consequence === "pos")? PosImg : (consequence === "neg")? NegImg : ConImg
         }
 
         this.responsesIncludeKey = this.responsesIncludeKey.bind(this);
@@ -81,13 +86,10 @@ class Future extends React.Component {
             content = <div>
                 <div className="Title">A vaccine for COVID-19 is expected to be widely available to the public in 12 to 18 months from now.</div>
                 <div className="Subtitle">
-                    The following news excerpt is a future scenario where a vaccine has been finally approved by the U.S. FDA.
-                    <div>
-                        Please read it below. 
-                    </div>
+                    The following news excerpt is a future scenario where a vaccine has been finally approved. Please read it below. 
                 </div>
                 <div>
-                    [ADD IMAGE HERE]
+                    <img src={this.state.image} alt="News Excerpt"/>
                 </div>
                 <hr/>
             </div>;
@@ -101,7 +103,7 @@ class Future extends React.Component {
                     <div className="Text" onMouseEnter={() => this.setState({showNews: true})} onMouseLeave={() => this.setState({showNews: false})}>
                             If needed, please hover to see the news.
                         <div>
-                            {(this.state.showNews)? "[ADD IMAGE HERE]": null}
+                            {(this.state.showNews)? <img src={this.state.image} alt="News Excerpt"/>: null}
                         </div>
                     </div>  
                 </div>

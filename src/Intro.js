@@ -22,7 +22,7 @@ class Intro extends React.Component {
         const delta_time = (new Date() - this.state.init) / 1000;
         console.log(delta_time);
         if (this.state.initialInfo) {
-            if (delta_time < 10) {
+            if (delta_time < 5) {
                 alert("Please take some time to carefully read the provided paragraph.");
             } else {
                 this.changeInternalState();
@@ -64,7 +64,7 @@ class Intro extends React.Component {
             <div className="BigText">
                 COVID-19 is a respiratory illness caused by a new coronavirus, first found in China in November 2019. 
                 After spreading across Asia, the disease has reached Europe and America, leading the World Health Organization (WHO) to declare it a pandemic. 
-                COVID-19 has so far infected over X people and has killed more than Y patients around the world. 
+                COVID-19 has so far infected over 1,400,000 people and has killed more than 80,000 patients around the world. 
             </div>
             <hr/>
         </div>;

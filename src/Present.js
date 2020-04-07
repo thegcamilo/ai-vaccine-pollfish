@@ -2,6 +2,9 @@ import React from 'react';
 import './App.css';
 import WillQuestions from './WillQuestions';
 import Button from 'react-bootstrap/Button';
+import AINews from './assets/AI.png';
+import humanNews from "./assets/human.png";
+import humanAINews from "./assets/human-AI.png";
 
 class Present extends React.Component {
     constructor(props) {
@@ -11,6 +14,7 @@ class Present extends React.Component {
             responses: {},
             init: new Date(),
             showNews: false,
+            image: (this.props.agent === "AI")? AINews : (this.props.agent === "human")? humanNews : humanAINews
         }
         this.changeInternalState = this.changeInternalState.bind(this);
         this.saveResponses = this.saveResponses.bind(this);
@@ -63,7 +67,7 @@ class Present extends React.Component {
                 <div className="Title">Please read the following news excerpt.</div>
                 {/* <div className="SubTitle">We have removed the real publisher as to not bias your judgement.</div> */}
                 <div>
-                    [ADD IMAGE HERE]
+                    <img src={this.state.image} alt="News Excerpt"/>
                 </div>
                 <hr/>
             </div>;
@@ -76,7 +80,7 @@ class Present extends React.Component {
                     <div className="Text" onMouseEnter={() => this.setState({showNews: true})} onMouseLeave={() => this.setState({showNews: false})}>
                             If needed, please hover to see the news.
                         <div>
-                            {(this.state.showNews)? "[ADD IMAGE HERE]": null}
+                            {(this.state.showNews)? <img src={this.state.image} alt="News Excerpt"/>: null}
                         </div>
                     </div>  
                 </div>

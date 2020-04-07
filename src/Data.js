@@ -21,19 +21,34 @@ export const introQuestions = {
     ]
 }
 
+// export const willQuestions = [
+//     [{id: "personalWill", question: "How willing would you be to get a shot of this new vaccine ", answers: ["Not willing at all", "I am not sure", "Very willing"]},
+//      {id: "childWill", question: "How willing would you be to take a child to get a shot of this new vaccine ", answers: ["Not willing at all", "I am not sure", "Very willing"]},
+//      {id: "elderWill", question: "How willing would you be to take an elder (over 65 yrs. old) to get a shot of this new vaccine ", answers: ["Not willing at all", "I am not sure", "Very willing"]}],
+//     [{id: "worriness", question: "How worried would you be about getting a shot of this new vaccine ", answers: ["Not worried at all", "I am not sure", "Very worried"]},
+//      {id: "riskness", question: "How risky do you think it would be for someone to get a shot of this new vaccine ", answers: ["Not risky at all", "I am not sure", "Very risky"]}]
+// ]
+
+// export const beforeAfter = {
+//     before: "before the final approval by the U.S. Food and Drug Administration (FDA)?",
+//     after: "after the final approval by the U.S. Food and Drug Administration (FDA)?",
+//     future: "approved by the U.S. Food and Drug Administration (FDA)?"
+// }
+
 export const willQuestions = [
-    [{id: "personalWill", question: "How willing would you be to get a shot of this new vaccine ", answers: ["Not willing at all", "I am not sure", "Very willing"]},
-     {id: "childWill", question: "How willing would you be to take a child to get a shot of this new vaccine ", answers: ["Not willing at all", "I am not sure", "Very willing"]},
-     {id: "elderWill", question: "How willing would you be to take an elder (over 65 yrs. old) to get a shot of this new vaccine ", answers: ["Not willing at all", "I am not sure", "Very willing"]}],
-    [{id: "worriness", question: "How worried would you be about getting a shot of this new vaccine ", answers: ["Not worried at all", "I am not sure", "Very worried"]},
-     {id: "riskness", question: "How risky do you think it would be for someone to get a shot of this new vaccine ", answers: ["Not risky at all", "I am not sure", "Very risky"]}]
+    [{id: "personalWill", question: "How willing are you to get this new vaccine", answers: ["Not willing at all", "I am not sure", "Very willing"]},
+     {id: "childWill", question: "How willing are you to get this new vaccine for your child", answers: ["Not willing at all", "I am not sure", "Very willing"]},
+     {id: "elderWill", question: "How willing are you to get this new vaccine for your elders (over 65 yrs. old)", answers: ["Not willing at all", "I am not sure", "Very willing"]}],
+    [{id: "worriness", question: "How worried would you be about getting this new vaccine", answers: ["Not worried at all", "I am not sure", "Very worried"]},
+     {id: "riskness", question: "How concerned are you that this vaccine shot might not be safe", answers: ["Not risky at all", "I am not sure", "Very risky"]}]
 ]
 
 export const beforeAfter = {
-    before: "before the final approval by the U.S. Food and Drug Administration (FDA)?",
-    after: "after the final approval by the U.S. Food and Drug Administration (FDA)?",
-    future: "approved by the U.S. Food and Drug Administration (FDA)?"
+    before: "?",
+    after: "?",
+    future: "?"
 }
+
 
 export const attentionCheck = {
     answers: [
