@@ -32,7 +32,7 @@ class Intro extends React.Component {
             if (delta_time < 15) {
                 alert("Please take some time to carefully answer the questions.");
             } else {
-                if (Object.keys(this.state.responses).length < 8) {
+                if (Object.keys(this.state.responses).length < 7) {
                     alert("You must answer all questions.");
                 } else {
                     this.props.saveDictToState(this.state.responses);

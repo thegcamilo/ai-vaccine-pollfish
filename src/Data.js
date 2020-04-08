@@ -13,10 +13,10 @@ export const introQuestions = {
         {id: "symptomLevel", question: "Have you or anyone you know showed any of the following symptoms? Fever, cough, sore throat, shortness of breath." , answers: ["Yes", "No", "I am not sure"]}
     ],
     concern: [
-        {id: "closeLikelihood", question: "How likely do you think it is that COVID-19 will affect your family, friends, and neighbors?", answers: ["Not likely at all", "Very likely"]},
-        {id: "personalLikelihood", question: "How likely are you to become ill with COVID-19?", answers: ["Not likely at all", "Very likely"]},
-        {id: "severeness", question: "If COVID-19 was or is in your community, how severe do you think the consequences might be to you and your family?", answers: ["Not severe at all", "Very severe"]},
-        {id: "closeDeath", question: "If a member of your immediate household became ill with COVID-19, how likely do you believe it is that the person might die from it?", answers: ["Not likely at all", "Very likely"]},
+        //{id: "closeLikelihood", question: "How likely do you think it is that COVID-19 will affect your family, friends, and neighbors?", answers: ["Not likely at all", "Very likely"]},
+        {id: "illLikelihood", question: "How likely are you to become ill with COVID-19?", answers: ["Not likely at all", "Very likely"]},
+        {id: "severeness", question: "How severe do you think the economic consequences of COVID-19 will be to you?", answers: ["Not severe at all", "Very severe"]},
+        {id: "closeDeath", question: "If you became severely ill with COVID-19, how likely do you believe it is that you might die from it?", answers: ["Not likely at all", "Very likely"]},
         {id: "concern", question: "How concerned are you about getting COVID-19?", answers: ["Not concerned at all", "Very concerned"]}
     ]
 }
@@ -40,7 +40,8 @@ export const willQuestions = [
      {id: "childWill", question: "How willing are you to get this new vaccine for your child", answers: ["Not willing at all", "I am not sure", "Very willing"]},
      {id: "elderWill", question: "How willing are you to get this new vaccine for your elders (over 65 yrs. old)", answers: ["Not willing at all", "I am not sure", "Very willing"]}],
     [{id: "worriness", question: "How worried would you be about getting this new vaccine", answers: ["Not worried at all", "I am not sure", "Very worried"]},
-     {id: "riskness", question: "How concerned are you that this vaccine shot might not be safe", answers: ["Not risky at all", "I am not sure", "Very risky"]}]
+     //{id: "riskness", question: "How concerned are you that this vaccine shot might not be safe", answers: ["Not risky at all", "I am not sure", "Very risky"]}
+    ]
 ]
 
 export const beforeAfter = {
@@ -154,14 +155,15 @@ export const demographics = [
         {id: "socialMediaNews", question: "On average, how many news links regarding COVID-19 have you accessed through social media in the last week?", answers: ["0 links", "1-5 links", "5-10 links", "Over 10 links"]},
         {id: "news", question: "How often do you proactively check the news regarding COVID-19?", answers: ["Never", "Once a few days", "Once a day", "More than once a day"]},
         {id: "socialMediaLastWeek", question: "How often have you accessed any social media platform in the last week?", answers: ["Never", "Once a few days", "Once every day", "Many times a day"]},
-        {id: "socialMediaDaily", question: "How much time do you usually spend daily on any social media platform?", answers: ["None", "Less than 30 minutes", "Around 1 hour", "2 hours or more"]}
+        {id: "socialMediaDaily", question: "How much time do you usually spend daily on any social media platform?", answers: ["None", "Less than 30 minutes", "Around 1 hour", "2 hours or more"]},
+        {id: "acquaintances", question: "How many acquaintances, except your household members, do you interact face-to-face daily these days (either online or offline)?", answers: ["None", "Less than 3 people", "Around 5 people", "More than 7 people"]}
     ])},
     {id: "personalCovid", questions: shuffle([
         {id: "insurance", question: "Do you have health insurance at the moment?", answers: ["Yes", "No"]},
         {id: "eldersLive", question: "Do you live with any elders (over 65 years old)?", answers: ["Yes", "No"]},
         {id: "childLive", question: "Do you live with any children?", answers: ["Yes", "No"]},
-        {id: "vaccinationFlu", question: "How often in the past have you gotten a flu vaccination?", answers: ["Never", "Once or Twice", "Most years", "Annually"]},
-        {id: "vaccination", question: "Have you gotten shots of the CDC recommended and required vaccines in the past?", answers: ["Yes", "Only the required vaccines", "Some", "No"]}
+        {id: "vaccinationFlu", question: "How often in the past have you gotten a flu vaccination?", answers: ["Never", "Once or Twice", "More than twice but not annually", "Annually"]},
+        {id: "vaccination", question: "Have you gotten shots of the CDC required vaccines in the past?", answers: ["Yes", "Some", "No"]}
     ])},
     {id: "personal", questions: shuffle([
         {id: "sex", question: "What is your sex?", answers: ["Female", "Male", "Other"]},
@@ -170,7 +172,7 @@ export const demographics = [
         {id: "education", question: "What is your highest degree or level of school you have completed?", answers: ["Less than a high school diploma", "High school or equivalent", "Some college, no degree", "Associate degree", "Bachelor's degree", "Master's degree", "Professional degree", "Doctorate"]},
         {id: "income", question: "What is your income level?", answers: ["Less than $20,000", "$20,000-$39,999", "$40,000-$59,999", "$60,000-$79,999", "$80,000-$99,999", "$100,000-$150,000", "More than $150,000"]},
         {id: "usPolitics", question: "How would you declare yourself regarding U.S. politics?", answers: ["As a Republican", "As an Independent", "As a Democrat"]},
-        {id: "politics", question: "How would you declare yourself politically?", answers: ["Conservative", "Moderate", "Liberal"]},
+        {id: "socialPos", question: "How would you declare yourself socially?", answers: ["Conservative", "Moderate", "Liberal"]},
     ])},
     {id: "state", questions: "Which U.S. state do you currently reside in?", answers: [{'label': 'Alabama', 'value': 'Alabama'}, {'label': 'Alaska', 'value': 'Alaska'}, {'label': 'American Samoa', 'value': 'American Samoa'}, {'label': 'Arizona', 'value': 'Arizona'}, {'label': 'Arkansas', 'value': 'Arkansas'}, {'label': 'California', 'value': 'California'}, {'label': 'Colorado', 'value': 'Colorado'}, {'label': 'Connecticut', 'value': 'Connecticut'}, {'label': 'Delaware', 'value': 'Delaware'}, {'label': 'District Of Columbia', 'value': 'District Of Columbia'}, {'label': 'Federated States Of Micronesia', 'value': 'Federated States Of Micronesia'}, {'label': 'Florida', 'value': 'Florida'}, {'label': 'Georgia', 'value': 'Georgia'}, {'label': 'Guam', 'value': 'Guam'}, {'label': 'Hawaii', 'value': 'Hawaii'}, {'label': 'Idaho', 'value': 'Idaho'}, {'label': 'Illinois', 'value': 'Illinois'}, {'label': 'Indiana', 'value': 'Indiana'}, {'label': 'Iowa', 'value': 'Iowa'}, {'label': 'Kansas', 'value': 'Kansas'}, {'label': 'Kentucky', 'value': 'Kentucky'}, {'label': 'Louisiana', 'value': 'Louisiana'}, {'label': 'Maine', 'value': 'Maine'}, {'label': 'Marshall Islands', 'value': 'Marshall Islands'}, {'label': 'Maryland', 'value': 'Maryland'}, {'label': 'Massachusetts', 'value': 'Massachusetts'}, {'label': 'Michigan', 'value': 'Michigan'}, {'label': 'Minnesota', 'value': 'Minnesota'}, {'label': 'Mississippi', 'value': 'Mississippi'}, {'label': 'Missouri', 'value': 'Missouri'}, {'label': 'Montana', 'value': 'Montana'}, {'label': 'Nebraska', 'value': 'Nebraska'}, {'label': 'Nevada', 'value': 'Nevada'}, {'label': 'New Hampshire', 'value': 'New Hampshire'}, {'label': 'New Jersey', 'value': 'New Jersey'}, {'label': 'New Mexico', 'value': 'New Mexico'}, {'label': 'New York', 'value': 'New York'}, {'label': 'North Carolina', 'value': 'North Carolina'}, {'label': 'North Dakota', 'value': 'North Dakota'}, {'label': 'Northern Mariana Islands', 'value': 'Northern Mariana Islands'}, {'label': 'Ohio', 'value': 'Ohio'}, {'label': 'Oklahoma', 'value': 'Oklahoma'}, {'label': 'Oregon', 'value': 'Oregon'}, {'label': 'Palau', 'value': 'Palau'}, {'label': 'Pennsylvania', 'value': 'Pennsylvania'}, {'label': 'Puerto Rico', 'value': 'Puerto Rico'}, {'label': 'Rhode Island', 'value': 'Rhode Island'}, {'label': 'South Carolina', 'value': 'South Carolina'}, {'label': 'South Dakota', 'value': 'South Dakota'}, {'label': 'Tennessee', 'value': 'Tennessee'}, {'label': 'Texas', 'value': 'Texas'}, {'label': 'Utah', 'value': 'Utah'}, {'label': 'Vermont', 'value': 'Vermont'}, {'label': 'Virgin Islands', 'value': 'Virgin Islands'}, {'label': 'Virginia', 'value': 'Virginia'}, {'label': 'Washington', 'value': 'Washington'}, {'label': 'West Virginia', 'value': 'West Virginia'}, {'label': 'Wisconsin', 'value': 'Wisconsin'}, {'label': 'Wyoming', 'value': 'Wyoming'}]},
 ]

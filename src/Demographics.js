@@ -30,7 +30,7 @@ class Demographics extends React.Component {
         if (delta_time < 30){
             alert("Please take some time to answer the questions.");
         } else {
-            if (Object.keys(this.state.responses).length < 24) {
+            if (Object.keys(this.state.responses).length < 25) {
                 alert("You must answer all questions.");
             } else {
                 this.props.saveDictToState(this.state.responses);

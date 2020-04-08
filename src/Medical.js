@@ -56,7 +56,8 @@ class Medical extends React.Component {
                             <input key={question.id + qIdx} 
                             style={!(question.id in this.state.responses)? {background: "#000000"}: {}} 
                             type="range" min="0" max="100" step="1" 
-                            onChange={(event) => {this.saveResponses(question.id, event.target.value)}}/>
+                            onChange={(event) => {this.saveResponses(question.id, event.target.value)}}
+                            onClick={(event) => {this.saveResponses(question.id, event.target.value)}}/>
                             <div className="SliderTicks">
                                     <span className="SliderLabel" style={{textAlign: "left", width: "33.3%"}}>|</span>
                                     <span className="SliderLabel" style={{width: "33.3%"}}>|</span>

@@ -58,7 +58,9 @@ class Future extends React.Component {
             if (delta_time < 15) {
                 alert("Please take some time to carefully answer the questions.");
             } else {
-                if (Object.keys(this.state.responses).length < 5) {
+                var condition = ("personalWillFuture" in this.state.responses) && ("childWillFuture" in this.state.responses) && ("elderWillFuture" in this.state.responses);
+                condition = condition && ("worrinessFuture" in this.state.responses);
+                if (!condition) { // change this
                     alert("You must answer all questions.");
                 } else {
                     // this.setState({hideButton: true});
@@ -86,7 +88,7 @@ class Future extends React.Component {
             content = <div>
                 <div className="Title">A vaccine for COVID-19 is expected to be widely available to the public in 12 to 18 months from now.</div>
                 <div className="Subtitle">
-                    The following news excerpt is a future scenario where a vaccine has been finally approved. Please read it below. 
+                    The following news excerpt is a future scenario where a vaccine has been finally approved by the U.S. Food and Drug Administration (FDA).
                 </div>
                 <div>
                     <img src={this.state.image} alt="News Excerpt"/>
