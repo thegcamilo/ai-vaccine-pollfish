@@ -54,9 +54,9 @@ export const beforeAfter = {
 export const attentionCheck = {
     answers: [
         {id: "public", text: "The general public"},
-        {id: "public", text: "A team of researchers"},
-        {id: "public", text: "An artificial intelligence program"},
-        {id: "public", text: "A team of researchers with the help of an artificial intelligence program"}]
+        {id: "human", text: "A team of researchers"},
+        {id: "AI", text: "An artificial intelligence program"},
+        {id: "human-AI", text: "A team of researchers with the help of an artificial intelligence program"}]
 };
 
 export const consequences = [
