@@ -26,7 +26,7 @@ class App extends React.Component{
       agent: getRandomItem(treatAgents),
       beforeAfter: getRandomItem(treatTimes),
       stages: ["consent", "intro", "present", "att", "future", "mmms", "demographics", "end"],
-      currStageId: 0,
+      currStageId: 4,
       responses: {}
     }
 
