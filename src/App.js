@@ -26,7 +26,7 @@ class App extends React.Component{
       agent: getRandomItem(treatAgents),
       beforeAfter: getRandomItem(treatTimes),
       stages: ["consent", "intro", "present", "att", "future", "mmms", "demographics", "end"],
-      currStageId: 0,
+      currStageId: 7,
       responses: {}
     }
 
@@ -69,12 +69,14 @@ class App extends React.Component{
     allResponses.agent = this.state.agent;
     allResponses.beforeAfter = this.state.beforeAfter;
     allResponses.prolificId = this.state.prolificId;
+    allResponses.studyId = this.state.studyId;
+    allResponses.sessionId = this.state.sessionId;
     const times = this.state.time;
     for (var keyTime in times) {
         allResponses[keyTime] = times[keyTime];
     }
     firebase.database().ref("/" + this.state.prolificId).set(allResponses).catch(error => console.log(error)).then(() => this.redirectToSurveyCompletion());
-    this.redirectToSurveyCompletion();
+    //this.redirectToSurveyCompletion();
 }
 
   redirectToSurveyCompletion() {
