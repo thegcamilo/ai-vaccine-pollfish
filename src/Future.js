@@ -98,7 +98,7 @@ class Future extends React.Component {
             content = <div>
                 <div>
                     <div className="Subtitle">
-                        Taking in consideration the news excerpt you have read, please answer the following questions.
+                        Taking in consideration the future news excerpt you have read, please answer the following questions.
                     </div>
                     <div className="Text" onMouseEnter={() => this.setState({showNews: true})} onMouseLeave={() => this.setState({showNews: false})}>
                             If needed, please hover to see the news.
@@ -123,7 +123,7 @@ class Future extends React.Component {
                     <div className="Text" onMouseEnter={() => this.setState({showNews: true})} onMouseLeave={() => this.setState({showNews: false})}>
                             If needed, please hover to see the news.
                         <div>
-                            {(this.state.showNews)? "[ADD IMAGE HERE]": null}
+                            {(this.state.showNews)? <img src={this.state.image} alt="News Excerpt"/>: null}
                         </div>
                     </div>  
                 </div>
