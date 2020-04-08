@@ -20,6 +20,8 @@ class App extends React.Component{
     this.state = {
       time: {"init": new Date()},
       prolificId: params.PROLIFIC_PID,
+      studyId: params.STUDY_ID,
+      sessionId: params.SESSION_ID,
       disease: getRandomItem(treatDiseases),
       agent: getRandomItem(treatAgents),
       beforeAfter: getRandomItem(treatTimes),
@@ -72,11 +74,11 @@ class App extends React.Component{
         allResponses[keyTime] = times[keyTime];
     }
     firebase.database().ref("/" + this.state.prolificId).set(allResponses).catch(error => console.log(error)).then(() => this.redirectToSurveyCompletion());
-    // this.redirectToSurveyCompletion();
+    this.redirectToSurveyCompletion();
 }
 
   redirectToSurveyCompletion() {
-    let path = 'https://google.com';
+    let path = 'https://app.prolific.co/submissions/complete?cc=74E52219';
     window.open(path, "_self");
 }
   render() {
