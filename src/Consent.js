@@ -6,7 +6,7 @@ class Consent extends React.Component {
     render() {
         return (
             <div>
-                <div className="Title">Record of Consent</div>
+                <div className="Title">Record of Consent - test</div>
                     <div className="Text">
                         In this survey, we will present you with some situations involving COVID-19 and its vaccine that is currently under development and testing.
                         <p style={{"fontWeight": "bold"}}>We are not looking for the correct answers, but your opinion on the matter.</p>
