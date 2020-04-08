@@ -58,7 +58,9 @@ class Responsibility extends React.Component {
                 <div>
                     {this.state.entityQuestions.map((question, qIdx) => (
                         // !(question.id === "Punish" && this.state.posNeg === "pos")? 
-                        <div style={(question.id === "Punish" && (this.state.posNeg === "pos" || this.state.posNeg === "con"))? {display: "none"}: {display: "initial"}} key={qIdx} className="Question">
+                        <div 
+                        // style={(question.id === "Punish" && (this.state.posNeg === "pos" || this.state.posNeg === "con"))? {display: "none"}: {display: "initial"}} 
+                        key={qIdx} className="Question">
                             <span className="Question" style={{margin: "0px"}}>{question.initial[[this.state.posNeg]]} </span>
                             <span className="Spotlight Question" style={{margin: "0px"}}> {entity.text} </span> 
                             <span className="Question" style={{margin: "0px"}}> {question.conclusion[[this.state.posNeg]]}</span>
