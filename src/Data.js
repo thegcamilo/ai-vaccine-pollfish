@@ -162,7 +162,7 @@ export const demographics = [
         {id: "insurance", question: "Do you have health insurance at the moment?", answers: ["Yes", "No"]},
         {id: "eldersLive", question: "Do you live with any elders (over 65 years old)?", answers: ["Yes", "No"]},
         {id: "childLive", question: "Do you live with any children?", answers: ["Yes", "No"]},
-        {id: "vaccinationFlu", question: "How often in the past have you gotten a flu vaccination?", answers: ["Never", "Once or Twice", "More than twice but not annually", "Annually"]},
+        {id: "vaccinationFlu", question: "How often in the past have you gotten a flu vaccination?", answers: ["Never", "Once or twice", "More than twice but not annually", "Annually"]},
         {id: "vaccination", question: "Have you gotten shots of the CDC required vaccines in the past?", answers: ["All of them", "Some", "Never"]}
     ])},
     {id: "personal", questions: shuffle([
