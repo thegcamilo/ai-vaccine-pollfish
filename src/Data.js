@@ -16,7 +16,7 @@ export const introQuestions = {
         //{id: "closeLikelihood", question: "How likely do you think it is that COVID-19 will affect your family, friends, and neighbors?", answers: ["Not likely at all", "Very likely"]},
         {id: "illLikelihood", question: "How likely are you to become ill with COVID-19?", answers: ["Not likely at all", "Very likely"]},
         {id: "severeness", question: "How severe do you think the economic consequences of COVID-19 will be to you?", answers: ["Not severe at all", "Very severe"]},
-        {id: "closeDeath", question: "If you became severely ill with COVID-19, how likely do you believe it is that you might die from it?", answers: ["Not likely at all", "Very likely"]},
+        {id: "closeDeath", question: "If you become infected with COVID-19, how likely do you believe it is that you might fall severely ill or die from it?", answers: ["Not likely at all", "Very likely"]},
         {id: "concern", question: "How concerned are you about getting COVID-19?", answers: ["Not concerned at all", "Very concerned"]}
     ]
 }
@@ -156,14 +156,14 @@ export const demographics = [
         {id: "news", question: "How often do you proactively check the news regarding COVID-19?", answers: ["Never", "Once a few days", "Once a day", "More than once a day"]},
         {id: "socialMediaLastWeek", question: "How often have you accessed any social media platform in the last week?", answers: ["Never", "Once a few days", "Once every day", "Many times a day"]},
         {id: "socialMediaDaily", question: "How much time do you usually spend daily on any social media platform?", answers: ["None", "Less than 30 minutes", "Around 1 hour", "2 hours or more"]},
-        {id: "acquaintances", question: "How many acquaintances, except your household members, do you interact face-to-face daily these days (either online or offline)?", answers: ["None", "Less than 3 people", "Around 5 people", "More than 7 people"]}
+        {id: "acquaintances", question: "How many people, excluding your household members, do you interact face-to-face daily these days (either online or offline)?", answers: ["None", "Less than 5 people", "Around 5-10 people", "More than 10 people"]}
     ])},
     {id: "personalCovid", questions: shuffle([
         {id: "insurance", question: "Do you have health insurance at the moment?", answers: ["Yes", "No"]},
         {id: "eldersLive", question: "Do you live with any elders (over 65 years old)?", answers: ["Yes", "No"]},
         {id: "childLive", question: "Do you live with any children?", answers: ["Yes", "No"]},
         {id: "vaccinationFlu", question: "How often in the past have you gotten a flu vaccination?", answers: ["Never", "Once or Twice", "More than twice but not annually", "Annually"]},
-        {id: "vaccination", question: "Have you gotten shots of the CDC required vaccines in the past?", answers: ["Yes", "Some", "No"]}
+        {id: "vaccination", question: "Have you gotten shots of the CDC required vaccines in the past?", answers: ["All of them", "Some", "Never"]}
     ])},
     {id: "personal", questions: shuffle([
         {id: "sex", question: "What is your sex?", answers: ["Female", "Male", "Other"]},
