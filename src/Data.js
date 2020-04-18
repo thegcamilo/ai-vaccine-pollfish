@@ -143,13 +143,13 @@ export const MMMS = {
 
 export const demographics = [
     {id: "govt", questions: shuffle([
-        {id: "govtOpen", question: "How open do you think the U.S. government is with information regarding COVID-19?", answers: ["Not open at all", " I am not sure", "Very open"]},
-        {id: "govtHonest", question: "How honest do you think the U.S. government is with information regarding COVID-19?", answers: ["Not honest at all", " I am not sure", "Very honest"]},
-        {id: "govtCompetent", question: "How competent do you believe the U.S. government is in handling COVID-19?", answers: ["Not competent at all", " I am not sure", "Very competent"]},
-        {id: "govtCommitment", question: "How committed do you believe the U.S. government is to protect you from COVID-19?", answers: ["Not committed at all", " I am not sure", "Very committed"]},
-        {id: "govtCare", question: "How much caring and concern do you think the U.S. government has shown about people who might be affected by this COVID-19 outbreak?", answers: ["Not much at all", " I am not sure", "Very much"]},
-        {id: "govtBelief", question: "How much do you believe that the U.S. government’s actions in response to COVID-19 are in your personal best interest?", answers: ["I don't believe", " I am not sure", "I do believe"]},
-        {id: "govtProtect", question: "How much do you believe the U.S. government will protect you from COVID-19?", answers: ["Not much at all", " I am not sure", "Very much"]}
+        {id: "govtOpen", question: "How open do you think the UK government is with information regarding COVID-19?", answers: ["Not open at all", " I am not sure", "Very open"]},
+        {id: "govtHonest", question: "How honest do you think the UK government is with information regarding COVID-19?", answers: ["Not honest at all", " I am not sure", "Very honest"]},
+        {id: "govtCompetent", question: "How competent do you believe the UK government is in handling COVID-19?", answers: ["Not competent at all", " I am not sure", "Very competent"]},
+        {id: "govtCommitment", question: "How committed do you believe the UK government is to protect you from COVID-19?", answers: ["Not committed at all", " I am not sure", "Very committed"]},
+        {id: "govtCare", question: "How much caring and concern do you think the UK government has shown about people who might be affected by this COVID-19 outbreak?", answers: ["Not much at all", " I am not sure", "Very much"]},
+        {id: "govtBelief", question: "How much do you believe that the UK government’s actions in response to COVID-19 are in your personal best interest?", answers: ["I don't believe", " I am not sure", "I do believe"]},
+        {id: "govtProtect", question: "How much do you believe the UK government will protect you from COVID-19?", answers: ["Not much at all", " I am not sure", "Very much"]}
     ])},
     {id: "newsSNS", questions: shuffle([
         {id: "socialMediaNews", question: "On average, how many news links regarding COVID-19 have you accessed through social media in the last week?", answers: ["0 links", "1-5 links", "5-10 links", "Over 10 links"]},
@@ -163,7 +163,7 @@ export const demographics = [
         {id: "eldersLive", question: "Do you live with any elders (over 65 years old)?", answers: ["Yes", "No"]},
         {id: "childLive", question: "Do you live with any children?", answers: ["Yes", "No"]},
         {id: "vaccinationFlu", question: "How often in the past have you gotten a flu vaccination?", answers: ["Never", "Once or twice", "More than twice but not annually", "Annually"]},
-        {id: "vaccination", question: "Have you gotten shots of the CDC required vaccines in the past?", answers: ["All of them", "Some", "Never"]}
+        {id: "vaccination", question: "Have you gotten shots of the required vaccines in the past?", answers: ["All of them", "Some", "Never"]}
     ])},
     {id: "personal", questions: shuffle([
         {id: "sex", question: "What is your sex?", answers: ["Female", "Male", "Other"]},
@@ -171,8 +171,22 @@ export const demographics = [
         {id: "ethnicity", question: "What is your ethnicity?", answers: ["Black (non-Hispanic)", "White (non-Hispanic)", "Asian", "Hispanic", "Other"]},
         {id: "education", question: "What is your highest degree or level of school you have completed?", answers: ["Less than a high school diploma", "High school or equivalent", "Some college, no degree", "Associate degree", "Bachelor's degree", "Master's degree", "Professional degree", "Doctorate"]},
         {id: "income", question: "What is your income level?", answers: ["Less than $20,000", "$20,000-$39,999", "$40,000-$59,999", "$60,000-$79,999", "$80,000-$99,999", "$100,000-$150,000", "More than $150,000"]},
-        {id: "usPolitics", question: "How would you declare yourself regarding U.S. politics?", answers: ["As a Republican", "As an Independent", "As a Democrat"]},
+        {id: "usPolitics", question: "How would you declare yourself politically?", answers: ["Conservative", "Moderate", "Liberal"]},
         {id: "socialPos", question: "How would you declare yourself socially?", answers: ["Conservative", "Moderate", "Liberal"]},
     ])},
-    {id: "state", questions: "Which U.S. state do you currently reside in?", answers: [{'label': 'Alabama', 'value': 'Alabama'}, {'label': 'Alaska', 'value': 'Alaska'}, {'label': 'American Samoa', 'value': 'American Samoa'}, {'label': 'Arizona', 'value': 'Arizona'}, {'label': 'Arkansas', 'value': 'Arkansas'}, {'label': 'California', 'value': 'California'}, {'label': 'Colorado', 'value': 'Colorado'}, {'label': 'Connecticut', 'value': 'Connecticut'}, {'label': 'Delaware', 'value': 'Delaware'}, {'label': 'District Of Columbia', 'value': 'District Of Columbia'}, {'label': 'Federated States Of Micronesia', 'value': 'Federated States Of Micronesia'}, {'label': 'Florida', 'value': 'Florida'}, {'label': 'Georgia', 'value': 'Georgia'}, {'label': 'Guam', 'value': 'Guam'}, {'label': 'Hawaii', 'value': 'Hawaii'}, {'label': 'Idaho', 'value': 'Idaho'}, {'label': 'Illinois', 'value': 'Illinois'}, {'label': 'Indiana', 'value': 'Indiana'}, {'label': 'Iowa', 'value': 'Iowa'}, {'label': 'Kansas', 'value': 'Kansas'}, {'label': 'Kentucky', 'value': 'Kentucky'}, {'label': 'Louisiana', 'value': 'Louisiana'}, {'label': 'Maine', 'value': 'Maine'}, {'label': 'Marshall Islands', 'value': 'Marshall Islands'}, {'label': 'Maryland', 'value': 'Maryland'}, {'label': 'Massachusetts', 'value': 'Massachusetts'}, {'label': 'Michigan', 'value': 'Michigan'}, {'label': 'Minnesota', 'value': 'Minnesota'}, {'label': 'Mississippi', 'value': 'Mississippi'}, {'label': 'Missouri', 'value': 'Missouri'}, {'label': 'Montana', 'value': 'Montana'}, {'label': 'Nebraska', 'value': 'Nebraska'}, {'label': 'Nevada', 'value': 'Nevada'}, {'label': 'New Hampshire', 'value': 'New Hampshire'}, {'label': 'New Jersey', 'value': 'New Jersey'}, {'label': 'New Mexico', 'value': 'New Mexico'}, {'label': 'New York', 'value': 'New York'}, {'label': 'North Carolina', 'value': 'North Carolina'}, {'label': 'North Dakota', 'value': 'North Dakota'}, {'label': 'Northern Mariana Islands', 'value': 'Northern Mariana Islands'}, {'label': 'Ohio', 'value': 'Ohio'}, {'label': 'Oklahoma', 'value': 'Oklahoma'}, {'label': 'Oregon', 'value': 'Oregon'}, {'label': 'Palau', 'value': 'Palau'}, {'label': 'Pennsylvania', 'value': 'Pennsylvania'}, {'label': 'Puerto Rico', 'value': 'Puerto Rico'}, {'label': 'Rhode Island', 'value': 'Rhode Island'}, {'label': 'South Carolina', 'value': 'South Carolina'}, {'label': 'South Dakota', 'value': 'South Dakota'}, {'label': 'Tennessee', 'value': 'Tennessee'}, {'label': 'Texas', 'value': 'Texas'}, {'label': 'Utah', 'value': 'Utah'}, {'label': 'Vermont', 'value': 'Vermont'}, {'label': 'Virgin Islands', 'value': 'Virgin Islands'}, {'label': 'Virginia', 'value': 'Virginia'}, {'label': 'Washington', 'value': 'Washington'}, {'label': 'West Virginia', 'value': 'West Virginia'}, {'label': 'Wisconsin', 'value': 'Wisconsin'}, {'label': 'Wyoming', 'value': 'Wyoming'}]},
+    {id: "state", questions: "Which UK region do you currently reside in?", answers: [
+        {'label': 'Scotland', 'value': 'Scotland'},
+        {'label': 'Northern Ireland', 'value': 'Northern Ireland'},
+        {'label': 'Wales', 'value': 'Wales'},
+        {'label': 'North East', 'value': 'North East'},
+        {'label': 'North West', 'value': 'North West'},
+        {'label': 'Yorkshire and the Humber', 'value': 'Yorkshire and the Humber'},
+        {'label': 'West Midlands', 'value': 'West Midlands'},
+        {'label': 'East Midlands', 'value': 'East Midlands'},
+        {'label': 'South East', 'value': 'South East'},
+        {'label': 'South West', 'value': 'South West'},
+        {'label': 'East of England', 'value': 'East of England'},
+        {'label': 'Greater London', 'value': 'Greater London'}
+
+    ]}
 ]
