@@ -80,7 +80,7 @@ class App extends React.Component{
 }
 
   redirectToSurveyCompletion() {
-    let path = 'https://app.prolific.co/submissions/complete?cc=623291DB';
+    let path = 'https://app.prolific.co/submissions/complete?cc=472B9295';
     window.open(path, "_self");
 }
   render() {
