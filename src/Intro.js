@@ -64,7 +64,7 @@ class Intro extends React.Component {
             <div className="BigText">
                 COVID-19 is a respiratory illness caused by a novel coronavirus, first found in China in November 2019. 
                 After spreading across Asia, the disease has reached Europe and America, leading the World Health Organization (WHO) to declare it a pandemic. 
-                COVID-19 has so far infected over 1,500,000 people and has killed more than 80,000 patients around the world. 
+                COVID-19 has so far infected over 2,300,000 people and has killed more than 155,000 patients around the world. 
             </div>
             <hr/>
         </div>;
