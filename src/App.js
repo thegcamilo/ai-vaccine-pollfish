@@ -19,9 +19,9 @@ class App extends React.Component{
     const params = queryString.parse(this.props.location.search);
     this.state = {
       time: {"init": new Date()},
-      prolificId: params.PROLIFIC_PID,
-      studyId: params.STUDY_ID,
-      sessionId: params.SESSION_ID,
+      prolificId: params.RESPONDENT_ID,
+      // studyId: params.STUDY_ID,
+      // sessionId: params.SESSION_ID,
       disease: getRandomItem(treatDiseases),
       agent: getRandomItem(treatAgents),
       beforeAfter: getRandomItem(treatTimes),
@@ -69,18 +69,18 @@ class App extends React.Component{
     allResponses.agent = this.state.agent;
     allResponses.beforeAfter = this.state.beforeAfter;
     allResponses.prolificId = this.state.prolificId;
-    allResponses.studyId = this.state.studyId;
-    allResponses.sessionId = this.state.sessionId;
+    // allResponses.studyId = this.state.studyId;
+    // allResponses.sessionId = this.state.sessionId;
     const times = this.state.time;
     for (var keyTime in times) {
         allResponses[keyTime] = times[keyTime];
     }
-    firebase.database().ref("/" + this.state.prolificId).set(allResponses).catch(error => console.log(error)).then(() => this.redirectToSurveyCompletion());
+    firebase.database().ref("/pollfish/" + this.state.prolificId).set(allResponses).catch(error => console.log(error)).then(() => this.redirectToSurveyCompletion());
     //this.redirectToSurveyCompletion();
 }
 
   redirectToSurveyCompletion() {
-    let path = 'https://app.prolific.co/submissions/complete?cc=472B9295';
+    let path = 'https://wss.pollfish.com/api/thirdparty/v1/complete';
     window.open(path, "_self");
 }
   render() {
