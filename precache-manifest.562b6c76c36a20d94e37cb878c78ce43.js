@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cd42c866171356d9d83c55711f39e2b6",
+    "revision": "0e17e221242d7692db1df781d72d1939",
     "url": "/ai-vaccine-pollfish/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ai-vaccine-pollfish/static/css/2.89f067aa.chunk.css"
   },
   {
-    "revision": "e1b01ca682f265bdd66a",
+    "revision": "c7a1d922cf8b385df0f7",
     "url": "/ai-vaccine-pollfish/static/css/main.7284f95e.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ai-vaccine-pollfish/static/js/2.a002297e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e1b01ca682f265bdd66a",
-    "url": "/ai-vaccine-pollfish/static/js/main.4d8c2ea6.chunk.js"
+    "revision": "c7a1d922cf8b385df0f7",
+    "url": "/ai-vaccine-pollfish/static/js/main.d2d33c9b.chunk.js"
   },
   {
     "revision": "6878b858a53844dadad7",

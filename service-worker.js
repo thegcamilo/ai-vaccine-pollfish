@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ai-vaccine-pollfish/precache-manifest.bec75480354b98a978bbb3a5253ae632.js"
+  "/ai-vaccine-pollfish/precache-manifest.562b6c76c36a20d94e37cb878c78ce43.js"
 );
 
 self.addEventListener('message', (event) => {

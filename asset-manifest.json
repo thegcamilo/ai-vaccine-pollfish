@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/ai-vaccine-pollfish/static/css/main.7284f95e.chunk.css",
-    "main.js": "/ai-vaccine-pollfish/static/js/main.4d8c2ea6.chunk.js",
-    "main.js.map": "/ai-vaccine-pollfish/static/js/main.4d8c2ea6.chunk.js.map",
+    "main.js": "/ai-vaccine-pollfish/static/js/main.d2d33c9b.chunk.js",
+    "main.js.map": "/ai-vaccine-pollfish/static/js/main.d2d33c9b.chunk.js.map",
     "runtime-main.js": "/ai-vaccine-pollfish/static/js/runtime-main.00c8983e.js",
     "runtime-main.js.map": "/ai-vaccine-pollfish/static/js/runtime-main.00c8983e.js.map",
     "static/css/2.89f067aa.chunk.css": "/ai-vaccine-pollfish/static/css/2.89f067aa.chunk.css",
     "static/js/2.a002297e.chunk.js": "/ai-vaccine-pollfish/static/js/2.a002297e.chunk.js",
     "static/js/2.a002297e.chunk.js.map": "/ai-vaccine-pollfish/static/js/2.a002297e.chunk.js.map",
     "index.html": "/ai-vaccine-pollfish/index.html",
-    "precache-manifest.bec75480354b98a978bbb3a5253ae632.js": "/ai-vaccine-pollfish/precache-manifest.bec75480354b98a978bbb3a5253ae632.js",
+    "precache-manifest.562b6c76c36a20d94e37cb878c78ce43.js": "/ai-vaccine-pollfish/precache-manifest.562b6c76c36a20d94e37cb878c78ce43.js",
     "service-worker.js": "/ai-vaccine-pollfish/service-worker.js",
     "static/css/2.89f067aa.chunk.css.map": "/ai-vaccine-pollfish/static/css/2.89f067aa.chunk.css.map",
     "static/css/main.7284f95e.chunk.css.map": "/ai-vaccine-pollfish/static/css/main.7284f95e.chunk.css.map",
@@ -26,6 +26,6 @@
     "static/css/2.89f067aa.chunk.css",
     "static/js/2.a002297e.chunk.js",
     "static/css/main.7284f95e.chunk.css",
-    "static/js/main.4d8c2ea6.chunk.js"
+    "static/js/main.d2d33c9b.chunk.js"
   ]
 }
