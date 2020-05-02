@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/ai-vaccine-pollfish/static/css/main.7284f95e.chunk.css",
+    "main.js": "/ai-vaccine-pollfish/static/js/main.4d8c2ea6.chunk.js",
+    "main.js.map": "/ai-vaccine-pollfish/static/js/main.4d8c2ea6.chunk.js.map",
+    "runtime-main.js": "/ai-vaccine-pollfish/static/js/runtime-main.00c8983e.js",
+    "runtime-main.js.map": "/ai-vaccine-pollfish/static/js/runtime-main.00c8983e.js.map",
+    "static/css/2.89f067aa.chunk.css": "/ai-vaccine-pollfish/static/css/2.89f067aa.chunk.css",
+    "static/js/2.a002297e.chunk.js": "/ai-vaccine-pollfish/static/js/2.a002297e.chunk.js",
+    "static/js/2.a002297e.chunk.js.map": "/ai-vaccine-pollfish/static/js/2.a002297e.chunk.js.map",
+    "index.html": "/ai-vaccine-pollfish/index.html",
+    "precache-manifest.bec75480354b98a978bbb3a5253ae632.js": "/ai-vaccine-pollfish/precache-manifest.bec75480354b98a978bbb3a5253ae632.js",
+    "service-worker.js": "/ai-vaccine-pollfish/service-worker.js",
+    "static/css/2.89f067aa.chunk.css.map": "/ai-vaccine-pollfish/static/css/2.89f067aa.chunk.css.map",
+    "static/css/main.7284f95e.chunk.css.map": "/ai-vaccine-pollfish/static/css/main.7284f95e.chunk.css.map",
+    "static/js/2.a002297e.chunk.js.LICENSE.txt": "/ai-vaccine-pollfish/static/js/2.a002297e.chunk.js.LICENSE.txt",
+    "static/media/AI.png": "/ai-vaccine-pollfish/static/media/AI.009932ce.png",
+    "static/media/con_.png": "/ai-vaccine-pollfish/static/media/con_.b738c7a7.png",
+    "static/media/human-AI.png": "/ai-vaccine-pollfish/static/media/human-AI.224d0a77.png",
+    "static/media/human.png": "/ai-vaccine-pollfish/static/media/human.170a0e83.png",
+    "static/media/neg_.png": "/ai-vaccine-pollfish/static/media/neg_.2a9d07ee.png",
+    "static/media/pos_.png": "/ai-vaccine-pollfish/static/media/pos_.62f648b1.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.00c8983e.js",
+    "static/css/2.89f067aa.chunk.css",
+    "static/js/2.a002297e.chunk.js",
+    "static/css/main.7284f95e.chunk.css",
+    "static/js/main.4d8c2ea6.chunk.js"
+  ]
+}
